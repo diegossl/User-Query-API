@@ -1,1 +1,1 @@
-# User-Query-API
+# User Query API
