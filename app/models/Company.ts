@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
  
-@Entity({ name: 'users' })
-export class User {
+@Entity({ name: 'companies' })
+export class Company {
   @PrimaryGeneratedColumn()
   id!: number
  
@@ -9,13 +9,10 @@ export class User {
   name!: string
 
   @Column()
-  username!: string
+  catchPhrase!: string
 
   @Column()
-  email!: string
-
-  @Column()
-  website!: string
+  bs!: string
 }
 
-export default User
+export default Company
