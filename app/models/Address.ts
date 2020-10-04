@@ -1,10 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
- 
+
 @Entity({ name: 'adresses' })
 export class Address {
   @PrimaryGeneratedColumn()
   id!: number
- 
+
   @Column()
   street!: string
 
