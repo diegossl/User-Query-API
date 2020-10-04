@@ -15,5 +15,8 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-useless-constructor": "off",
+        "padded-blocks": "off",
+        "no-trailing-spaces": "off"
     }
 }

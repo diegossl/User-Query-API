@@ -1,7 +1,23 @@
-import IAddress from './IAddress'
-import ICompany from './ICompany'
+interface IGeo {
+  lat: string
+  lng: string
+}
 
-export default interface IUser {
+interface IAddress {
+  street: string
+  suite: string
+  city: string
+  zipcode: string
+  geo: IGeo
+}
+
+interface ICompany {
+  name: string
+  catchPhrase: string
+  bs: string
+}
+
+interface IUser {
   id: number
   name: string
   username: string
@@ -11,3 +27,5 @@ export default interface IUser {
   website: string
   company: ICompany
 }
+
+export default IUser

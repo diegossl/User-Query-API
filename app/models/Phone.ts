@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm'
+import User from './User'
 
 @Entity({ name: 'phones' })
 export class Phone {
@@ -7,6 +8,9 @@ export class Phone {
 
   @Column()
   number!: string
+
+  @ManyToOne(type => User, user => user.phone)
+  user!: number
 }
 
 export default Phone
