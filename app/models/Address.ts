@@ -19,10 +19,10 @@ export class Address {
   zipcode!: string
 
   @Column()
-  lat!: string
+  lat!: number
 
   @Column()
-  lng!: string
+  lng!: number
 
   @OneToMany(type => User, user => user.address)
   user!: number

@@ -12,10 +12,8 @@ createConnection({
   entities: [path.resolve(__dirname, '..', 'app/models/*.ts')], // lembrar de mudar para *js
   synchronize: true,
   logging: false
+}).then(async () => {
+  console.log('Database successfully connected')
+}).catch(async () => {
+  console.log('Failed to try to connect to database')
 })
-  .then(() => {
-    console.log('Database successfully connected')
-  })
-  .catch(() => {
-    console.log('Failed to try to connect to database')
-  })

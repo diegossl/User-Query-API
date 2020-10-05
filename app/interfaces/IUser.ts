@@ -1,6 +1,6 @@
 interface IGeo {
-  lat: string
-  lng: string
+  lat: number
+  lng: number
 }
 
 interface IAddress {

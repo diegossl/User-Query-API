@@ -1,0 +1,8 @@
+{
+   "migrations": [
+      "database/migrations/**/*.ts"
+   ],
+   "cli": {
+      "migrationsDir": "database/migrations"
+   }
+}

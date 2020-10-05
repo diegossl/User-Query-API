@@ -6,13 +6,11 @@ import Address from '../models/Address'
 import Phone from '../models/Phone'
 import Company from '../models/Company'
 import IUser from '../interfaces/IUser'
-import log from '../../config/elasticsearch'
 
 export default {
   async index (request: Request, response: Response): Promise<Response> {
     try {
       const users: IUser[] = await DataCollectionService.getUserData()
-      // log.info({ body: 'Success', method: 'POST' })
       return response.status(200).send({ users })
     } catch (error) {
       return response.status(500).send({ error: 'Internal server error' })
