@@ -38,10 +38,27 @@ Finally, to start using, type the following command:
 npm start
 ```
 
+## Tests
+
+### Jest
+
+The API can be tested using the following command:
+
+```bash
+npm test
+```
+
+### Postman
+
+[API Documentation](https://www.getpostman.com/collections/52d3c83303d2b8535257)
+
 ## Use
 
 The API is ready to be used on the routes:
 
-**GET** [http://localhost:3000/list](http://localhost:3000/list)
+**[GET] Baixar Dados** [http://localhost:3000/list](http://localhost:3000/list)
 
-**POST** [http://localhost:3000/register](http://localhost:3000/register)
+**[POST] Salvar Dados** [http://localhost:3000/register](http://localhost:3000/register)
+
+
+
