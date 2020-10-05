@@ -1,6 +1,7 @@
 import app from '../app'
 import debug from 'debug'
 import http, { Server } from 'http'
+import Logger from '../logger'
 
 const port = '3000'
 
@@ -37,4 +38,5 @@ function onListening () {
     ? 'pipe ' + addr
     : 'port ' + addr.port
   debug('Listening on ' + bind)
+  Logger.info('Listening on ' + bind)
 }

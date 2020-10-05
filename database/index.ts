@@ -9,7 +9,7 @@ createConnection({
   username: 'root',
   password: 'root123',
   database: 'nodejs_challenge',
-  entities: [path.resolve(__dirname, '..', 'app/models/*.ts')], // lembrar de mudar para *js
+  entities: [path.resolve(__dirname, '..', 'app/models/*.js')], // lembrar de mudar para *js
   synchronize: true,
   logging: false
 }).then(async () => {

@@ -6,17 +6,33 @@ import Address from '../models/Address'
 import Phone from '../models/Phone'
 import Company from '../models/Company'
 import IUser from '../interfaces/IUser'
+import Logger from '../../logger'
 
 export default {
+
+  /**
+   * @param {Request} 
+   * @param {Response} 
+   * @return {User}
+   * @description Lists all users who are consumed by the data collection service.
+   */
   async index (request: Request, response: Response): Promise<Response> {
     try {
       const users: IUser[] = await DataCollectionService.getUserData()
+      Logger.info('Data downloaded')
       return response.status(200).send({ users })
     } catch (error) {
+      Logger.error('Internal server error')
       return response.status(500).send({ error: 'Internal server error' })
     }
   },
 
+  /**
+   * @param {Request} 
+   * @param {Response} 
+   * @return {Object}
+   * @description Saves all users who live in suites in the database.
+   */
   async store (request: Request, response: Response): Promise<Response> {
     try {
       const users: IUser[] = await DataCollectionService.getUserData()
@@ -67,8 +83,10 @@ export default {
           await phoneRepository.save(currentPhone)
         }
       })
+      Logger.info('Successfully registered users')
       return response.status(200).send({ success: 'Successfully registered users' })
     } catch (error) {
+      Logger.error('Internal server error')
       return response.status(500).send({ error: 'Internal server error' })
     }
   }
