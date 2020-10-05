@@ -43,4 +43,5 @@ npm start
 The API is ready to be used on the routes:
 
 **GET** [http://localhost:3000/list](http://localhost:3000/list)
+
 **POST** [http://localhost:3000/register](http://localhost:3000/register)
