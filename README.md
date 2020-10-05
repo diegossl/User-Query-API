@@ -50,7 +50,9 @@ npm test
 
 ### Postman
 
-[API Documentation](https://www.getpostman.com/collections/52d3c83303d2b8535257)
+Api route collection link:
+
+[https://www.getpostman.com/collections/52d3c83303d2b8535257](https://www.getpostman.com/collections/52d3c83303d2b8535257)
 
 ## Use
 
