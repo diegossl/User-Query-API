@@ -23,7 +23,8 @@ npm install
 
 Then it is necessary to transpile the application to JavaScript, for this type the following command in the terminal:
 
-For the API to work, you need to have MySQL installed on your machine. Then, create a database, configure the **username**, **password** and **database** credentials that are in the **index.ts** file in the **database** folder and create a database with the name of your choice.
+For the API to work, you need to have MySQL installed on your machine. Then configure the credentials for **username**, **password** and **database** that are in the file **index.ts** in the folder **database** and create a database with the name of your choice.
+
 
 After configuration, the application can be built:
 
